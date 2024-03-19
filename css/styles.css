@@ -353,6 +353,16 @@ a {
     
 }
 
+.feature-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    background-color: var(--cornflower);
+    border-radius: 4px;
+}
 .feature-name {
     margin-bottom: 8px;
 }
@@ -452,6 +462,15 @@ a {
 
 }
 
+.social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 8px;
+}
+
 .customers-section {
     background-color: var(--white);
     padding: 120px 0;
@@ -473,6 +492,14 @@ a {
    
 }
 
+.customers-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 72px;
+    border: 1px solid #8e8f99;
+        border-radius: 4px;
+}
 
 
 /* Footer Styles */
