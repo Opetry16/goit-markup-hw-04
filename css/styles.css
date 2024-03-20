@@ -237,7 +237,7 @@ a {
 .filter-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 93px;
+    gap: 24px;
   }
   
   .filter-buttons li {
@@ -260,9 +260,7 @@ a {
     padding: 12px 24px;
 }
 
-.filter-button {
-    margin-right: 24px;	
-}
+
 .filter-button:hover,
 .filter-button:focus {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
@@ -271,17 +269,16 @@ a {
 }
 
 
-.project-section {
+.projects-section {
     padding-top: 96px;
     padding-bottom: 120px;
-
 }
 .project-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 48px 24px;
     margin-top: 72px;
-    margin-bottom: 120px;
+    
 }
 
 .project-item {
@@ -293,9 +290,8 @@ a {
 
 .project-info {
     border: 1px solid var(--cornflower);
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
+    border-top: none;
+    padding: 32px 16px;
     position: relative;
     overflow: hidden;
 }
