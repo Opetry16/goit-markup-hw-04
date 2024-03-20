@@ -350,7 +350,6 @@ a {
 .feature-item {
     flex: 1; /* Para que los elementos ocupen el mismo espacio */
     margin-right: 24px; /* Agrega espacio entre los elementos */
-    
 }
 
 .feature-wrapper {
@@ -464,12 +463,34 @@ a {
 
 .social-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;    
+    justify-content: center;         
     flex-direction: row;
     gap: 24px;
     margin-top: 8px;
+    fill: var(--cloud);
 }
+
+.socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: var(--iris);
+    border: 1px solid var(--iris);
+    background-color: var(--iris);
+    border-radius: 50%;
+  }
+
+  .socials-icon {
+    fill: currentColor;
+  }
+
+  .socials-icon {
+    color: var(--cloud);
+  }
+
 
 .customers-section {
     background-color: var(--white);
@@ -492,20 +513,55 @@ a {
    
 }
 
-.customers-list {
+.customers-list-icons {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     margin-top: 72px;
-    border: 1px solid #8e8f99;
-        border-radius: 4px;
+    
 }
 
+.customers-item {
+    border: 1px solid var(--light-slate);
+    border-radius: 4px;
+    width: 168px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+}
+
+.customers-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.customers-icon {
+    fill: var(--light-slate);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+}
+
+.customer-item:hover, 
+.customer-item:focus 
+.customers-icon:hover,
+.customers-icon:focus {
+    fill: var(--ocean);
+    transition: --var(--transition-duration); 
+    transition-delay: --var(--transition-timing-function);
+}
 
 /* Footer Styles */
 .footer {
-    padding: 100px 0;
     background: var(--navy-blue);
+    display: flex;
+    flex-direction: row;
+    padding: 100px 0 100px 156px;
     
 }
 
@@ -530,6 +586,35 @@ a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+.footer-caption {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-left: 120px;
+    padding-bottom: 16px;
+
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 120px;
+    gap: 16px;
+    
+}
+    
+.socials-item:hover,
+.socials-item:focus {
+    border-radius: 50%;
+    background-color: var(--green);
+    transition: --var(--transition-duration); 
+    transition-delay: --var(--transition-timing-function);
+
 }
 
 /* #region Modal window */
@@ -578,15 +663,25 @@ a {
     position: absolute;
     top: 24px;
     right: 24px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
-  
+    fill: var(--cornflower);
+    width: 24px;
+    height: 24px;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
     background-color: transparent;
     border: none;
  }
 .modal-btn-icon {
     stroke: var(--navy-blue);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: var(--ocean);
 }
   /* #endregion Modal window */
