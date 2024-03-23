@@ -148,6 +148,18 @@ a {
     transition: --var(--transition-duration), --var(--transition-timing-function);
 }
 
+.nav-link {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--navy-blue);
+        padding: 24px 0px 24px 0px;
+        display: block;
+        position: relative;
+        transition: --var(--transition-duration), --var(--transition-timing-function);
+}
 
 
 .contact-number,
@@ -180,14 +192,22 @@ a {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-
-}
-
-.nav-link.active::after,
-.nav-link:hover::after {
     background-color: var(--ocean);
 }
-
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+}
+.nav-link:hover::after {
+    background-color: var(--ocean);
+    
+}
 
 .services-section {
     padding: 188px 0;
@@ -254,8 +274,6 @@ a {
 
 .filter-buttons li {
     display: inline-block;
-    /* Розташувати елементи в рядок */
-
 }
 
 .filter-button {
@@ -271,6 +289,8 @@ a {
     cursor: pointer;
     border-radius: 4px;
     padding: 12px 24px;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 
@@ -295,6 +315,10 @@ a {
 
 }
 
+.project-link {
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+}
 .project-link:hover,
 .project-link:focus {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -305,6 +329,8 @@ a {
     flex-basis: calc((100% - 48px) / 3);
     width: calc((100% - 48px) / 3);
     position: relative;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 .project-item:hover,
@@ -508,6 +534,8 @@ a {
     border: 1px solid var(--iris);
     background-color: var(--iris);
     border-radius: 50%;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 .socials-icon {
@@ -520,6 +548,26 @@ a {
 
 .socials-link:hover,
 .socials-link:focus {
+    background-color: var(--ocean);
+    border: 1px solid var(--ocean);
+}
+
+
+.socials-link-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: var(--iris);
+    border: 1px solid var(--iris);
+    background-color: var(--iris);
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+}
+.socials-link-footer:hover,
+.socials-link-footer:focus {
     background-color: var(--green);
     border: 1px solid var(--green);
 }
@@ -555,23 +603,21 @@ a {
 }
 
 .customers-item {
-    border: 1px solid var(--light-slate);
-    border-radius: 4px;
     width: 168px;
     height: 88px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
+    gap: 24px;
 }
 
-.customers-wrapper {
+.customers-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    border: 1px solid var(--light-slate);
+    border-radius: 4px;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 .customers-icon {
@@ -580,16 +626,17 @@ a {
     transition-timing-function: var(--transition-timing-function);
 }
 
+.customers-link:hover,
+.customers-link:focus {
+    border: 1px solid var(--ocean);
+}
 
-.customers-icon:hover,
-.customers-icon:focus {
+.customers-link:hover > .customers-icon,
+.customers-link:focus > .customers-icon {
     fill: var(--ocean);
 }
 
-.customers-item:hover,
-.customers-item:focus {
-    border: 1px solid var(--ocean);
-}
+
 
 /* Footer Styles */
 .footer {
@@ -653,12 +700,12 @@ a {
 
 }
 
+
+
 .socials-item:hover,
 .socials-item:focus {
     border-radius: 50%;
     background-color: var(--green);
-    transition: --var(--transition-duration), --var(--transition-timing-function);
-
 }
 
 /* #region Modal window */
@@ -695,7 +742,8 @@ a {
     z-index: 999;
     /* Додаємо z-index, щоб вікно було поверх усіх інших елементів */
 
-    transition: --var(--transition-duration), --var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: transform, opacity;
     transition-delay: 300ms;
 }
@@ -721,7 +769,8 @@ a {
     stroke-width: 1px;
     border: none;
     stroke: rgba(0, 0, 0, 0.1);
-    transition: --var(--transition-duration), --var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 
@@ -731,12 +780,14 @@ a {
     background-color: var(--ocean);
 }
 
-.modal-btn-icon {
-    fill: var(--navy-blue);
-    transition: --var(--transition-duration), --var(--transition-timing-function);
-}
-.modal-btn-icon:hover,
-.modal-btn-icon:focus {
+.modal-btn:hover > .modal-btn-icon,
+.modal-btn:focus > .modal-btn-icon {
     fill: var(--white);
 }
+.modal-btn-icon {
+    fill: var(--navy-blue);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+}
+
 /* #endregion Modal window */
